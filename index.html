@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile Card</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-wrapper {
+      position: relative;
+      width: 320px;
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+      padding: 1rem;
+      cursor: pointer;
+    }
+
+    .card-wrapper:hover {
+      box-shadow:
+        0 0 15px 5px rgba(99,102,241,0.6),
+        0 10px 25px rgba(99,102,241,0.3);
+    }
+
+    .card-wrapper:hover .glow-circle {
+      opacity: 1;
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin: 0 0 0.25rem 0;
+    }
+
+    .title {
+      color: #f0f0f3;
+      background: #7c3aed;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .description {
+      font-size: 0.875rem;
+      color: #6b7280;
+      margin: 0 0 1.5rem 0;
+      padding: 0 1rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.2rem;
+      font-size: 1.5rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      transition: transform 0.2s ease, color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.2);
+    }
+
+    /* Specific brand colors */
+    .social-links a.facebook {
+      color: #1877f2;
+    }
+
+    .social-links a.tiktok {
+      color: #ff0050;
+    }
+
+    .social-links a.whatsapp {
+      color: #25d366;
+    }
+
+    .btn {
+      background-color: #7c3aed;
+      color: white;
+      border: none;
+      padding: 0.5rem 1.25rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #5b21b6;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="card-wrapper">
+    <div class="glow-circle"></div>
+    <div class="card-content">
+      <img class="avatar" src="e615f536-4c4e-4584-9d73-fc331756b957.jpeg" alt="Profile Avatar" />
+      <h2>C/qaadir C/risaaq</h2>
+      <p class="title">Computer Science</p>
+      <p class="description">
+        Waan xiiseeyaa qorista kood nadiif ah, samaynta nidaamyo la ballaarin karo, iyo xallinta dhibaatooyinka dhabta ah ee nolosha iyadoo la adeegsanayo software qurux badan oo wax ku ool ah.
+      </p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/aaaadam.2025" target="_blank" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.tiktok.com/@daadir030" target="_blank" class="tiktok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://web.whatsapp.com/" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+      <button class="btn">Contact Me</button>
+    </div>
+  </div>
+</body>
+</html>
